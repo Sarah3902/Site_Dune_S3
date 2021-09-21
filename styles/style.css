@@ -131,6 +131,26 @@ main {
     height: 30vh;
   }
 
+  .control_fleches {
+    position: relative;
+    top: -150px;
+    height: 45px;
+    color: wheat;
+  }
+
+  .fleches {
+    position: absolute;
+    color: wheat;
+  }
+
+  .avant {
+    left: 30px;
+  }
+
+  .apres {
+    right: 30px;
+  }
+
 
   /* FOOTER */
 

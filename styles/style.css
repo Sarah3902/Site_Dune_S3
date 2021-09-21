@@ -222,6 +222,7 @@ main {
     border: none;
     border-radius: 20px;
     cursor: pointer;
+    font-size: 15px;
     }
 
   .btnPopup:hover{

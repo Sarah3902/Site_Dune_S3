@@ -1,0 +1,183 @@
+@font-face {
+    font-family: roger;
+    src: url(../fonts/DINNextLTPro-Black.woff2) format("woff2"), url(../fonts/DINNextLTPro-Black.woff) format("woff");
+}
+@font-face {
+    font-family: michel;
+    src: url(../fonts/DINNextLTPro-Light.woff2) format("woff2"), url(../fonts/DINNextLTPro-Light.woff) format("woff");
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+svg {
+    width: 40px;
+    height: 40px;
+    color: wheat;
+    position: absolute;
+}
+
+.header_d img {
+    position: fixed;
+    width: 300px;
+    top: -3%;
+    left: 2%;
+}
+
+#wb_logo {
+    top: 5%;
+    right: 4%;
+}
+
+#leg_logo {
+    top: 15%;
+    right: 4%;
+}
+
+/* Dimensionner les diapos et leur contenu */
+
+main {
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y proximity;
+}
+
+.bg {
+    height: 100vh;
+    font-size: 50vh;
+    text-align: center;
+    color: white;
+    scroll-snap-align: start;
+    background-size: cover;
+  }
+  
+/* Ajouter les images en bg */
+  .bg:nth-of-type(1) {
+    background-image: url(../medias/images/dune-timothee-chalamet.jpg);
+    background-attachment: fixed;
+  }
+  
+  .bg:nth-of-type(2) {
+    background-image: url(../medias/images/Dune06.webp);
+    background-attachment: fixed;
+  }
+  
+  .bg:nth-of-type(3) {
+    background-image: url(../medias/images/Dune02.webp);
+    background-attachment: fixed;
+  }
+
+  .bg:nth-of-type(4) {
+    background-image: url(../medias/images/dune-production_01.jpg);
+    background-attachment: fixed;
+  }
+
+  .bg:nth-of-type(5) {
+    background-image: url(../medias/images/dune-timothee-chalamet-rebecca-ferguson.jpeg);
+    background-attachment: fixed;
+  }
+
+
+  /* CONTENUS SLIDES */
+
+  h2 {
+    font-size: 40px;
+    text-align: center;
+    font-family: michel;
+    font-weight: lighter;
+    color: wheat;
+}
+
+  /* Slide 2 */
+
+  .slide2>h2 {
+    position: relative;
+    top: 58vh;
+    left: -35vw;
+  }
+
+  .slide2>img {
+    width: 25vw;
+    position: relative;
+    top: 16vh;
+    left: 20vw;
+  }
+
+  .slide2>div {
+    font-size: 15px;
+    background-color: rgba(150, 150, 150, 80%);
+    /* height: 30vh; */
+    padding: 40px;
+    text-align: justify;
+    columns: 25vw;
+    column-gap: 50px;
+    column-rule: 1px solid wheat;
+  }
+
+  /* Slide 3 */
+
+  .slide3>h2 {
+    position: relative;
+    top: 60vh;
+    left: -30vw;;
+  }
+
+  .infos_persos {
+    /* position: relative; */
+    background-color: rgba(150, 150, 150, 80%);
+    height: 30vh;
+  }
+
+
+  /* FOOTER */
+
+  footer svg {
+    width: 30px;
+    height: 30px;
+    color: wheat;
+    position: absolute;
+    right: 4%;
+  }
+
+  #fb {
+    bottom: 16%;
+  }
+
+  #twitter {
+      bottom: 10%;
+  }
+
+  #insta {
+      bottom: 4%;
+  }
+
+  /* VIDEO */
+
+  #container_video {
+    position: relative;
+    width: 50vw;
+    height: calc(50vw * 390 / 640);
+    margin: auto;
+    top: 30%;
+    left: -20%;
+  }
+  
+  #video {
+    width: 35vw;
+    height: calc(35vw * 390 / 640);
+    display: block;
+    position: absolute;
+    top: 16%;
+    right: 0;
+  }
+  
+  .scroll {
+    position: fixed !important;
+    width: 30vw !important;
+    height: calc(30vw * 3 / 4) !important;
+    top: 5vh !important;
+    right: 5% !important;
+  }

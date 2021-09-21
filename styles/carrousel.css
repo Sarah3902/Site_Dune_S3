@@ -1,0 +1,73 @@
+/* Boutons */
+.control {
+    text-align: center;
+  }
+
+  .slide3 {
+    perspective: 2000px;
+  }
+
+  .carrousel_persos {
+    transform-style: preserve-3d;
+    position: relative;
+    width: 50vw;
+    height: 20vh;
+    margin: 5vh auto;
+    transition: 1s;
+  }
+  
+  /* Facettes */
+  .carrousel_persos>img {
+    background-color: lightskyblue;
+    font-size : 5vh;
+    /* line-height: 20vh; */
+    text-align: center;
+    width: 200px;
+    position: absolute;
+    top: 18vh;
+    left: 30vw;
+    backface-visibility: hidden;
+  }
+  
+  .car1 {
+    transform: rotateY(0deg) translateZ(80vw);}
+  
+  .car2 {
+    transform: rotateY(60deg) translateZ(80vw);
+  }
+  
+  .car3 {
+    transform: rotateY(120deg) translateZ(80vw);
+  }
+  
+  .car4 {
+    transform: rotateY(180deg) translateZ(80vw);
+  }
+  
+  .car5 {
+    transform: rotateY(240deg) translateZ(80vw);
+  }
+  
+  .car6 {
+    transform: rotateY(300deg) translateZ(80vw);
+  }
+
+  .car7 {
+    transform: rotateY(300deg) translateZ(80vw);
+  }
+
+  .car8 {
+    transform: rotateY(300deg) translateZ(80vw);
+  }
+
+  .car9 {
+    transform: rotateY(300deg) translateZ(80vw);
+  }
+
+  .car10 {
+    transform: rotateY(300deg) translateZ(80vw);
+  }
+
+  .car11 {
+    transform: rotateY(300deg) translateZ(80vw);
+  }

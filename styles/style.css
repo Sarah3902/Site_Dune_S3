@@ -158,7 +158,7 @@ main {
 
   .slide4>h2 {
     position: relative;
-    top: 50vh;
+    top: 45vh;
     left: -30vw;
     z-index: +1;
   }
@@ -190,6 +190,30 @@ main {
   }
 
 
+  /* SLIDE 5 */
+
+  .slide5>h2 {
+    position: relative;
+    top: 48vh;
+    left: -30vw;
+    z-index: +1;
+  }
+
+  .carto {
+    /* width: 25vw; */
+    height: 50vh;
+    margin: auto;
+    position: relative;
+    top: 35vh;
+    background-color: rgba(150, 150, 150, 80%);
+    padding: 20px;
+   }
+
+   .localisation {
+     color: black;
+     font-size: large;
+     
+   }
 
   /* FOOTER */
 

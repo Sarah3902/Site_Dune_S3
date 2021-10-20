@@ -124,7 +124,7 @@ main {
   .slide3>h2 {
     position: relative;
     top: 60vh;
-    left: -30vw;;
+    left: -30vw;
   }
 
   .infos_persos {
@@ -154,6 +154,43 @@ main {
   }
 
 
+  /* SLIDE 4 */
+
+  .slide4>h2 {
+    position: relative;
+    top: 50vh;
+    left: -30vw;
+    z-index: +1;
+  }
+
+  .img_film {
+    /* position: relative; */
+    height: 30vh;
+    padding-top: 6vh;
+  }
+
+  .control_fleches2 {
+    position: relative;
+    top: -80px;
+    height: 45px;
+    color: wheat;
+  }
+
+  .fleches2 {
+    position: absolute;
+    color: wheat;
+  }
+
+  .avant2 {
+    left: 30px;
+  }
+
+  .apres2 {
+    right: 30px;
+  }
+
+
+
   /* FOOTER */
 
   footer svg {
@@ -175,6 +212,8 @@ main {
   #insta {
       bottom: 4%;
   }
+
+
 
   /* VIDEO */
 
@@ -203,6 +242,8 @@ main {
     top: 5vh !important;
     right: 5% !important;
   }
+
+
 
   /* POP UP */
 

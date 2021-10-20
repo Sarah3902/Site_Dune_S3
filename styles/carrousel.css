@@ -29,7 +29,7 @@
      left: 135px;
    }
    
-   span {
+   .control>span {
     display: inline-block;
     width: 20px;
     height: 10px;

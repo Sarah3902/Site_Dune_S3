@@ -5,6 +5,76 @@
 let index = 0;
 let index1 = 0;
 
+// CARTE (SLIDE 5)
+
+// Création de la carte, vide à ce stade
+const carte = L.map('carte', {
+  center: [47.2608333, 2.4188888888888886], // Centre de la France
+  zoom: 5,
+  minZoom: 4,
+  maxZoom: 19,
+});
+
+// Ajout des tuiles (ici OpenStreetMap)
+// https://wiki.openstreetmap.org/wiki/Tiles#Servers
+L.tileLayer('https://a.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="https://openstreetmap.org/copyright">OpenStreetMap contributors</a>',
+}).addTo(carte);
+
+// Ajout de l'échelle
+L.control.scale().addTo(carte);
+
+// Appelée si récupération des coordonnées réussie
+
+  // Injection du résultat dans du texte
+function positionSucces(position) {
+  const lat = Math.round(1000 * position.coords.latitude) / 1000;
+   const long = Math.round(1000 * position.coords.longitude) / 1000;
+  $(".localisation").text(`Latitude: ${lat}°, Longitude: ${long}°`);
+  carte.flyTo([lat, long], 12);
+};
+
+// Appelée si échec de récuparation des coordonnées
+function positionErreur(erreurPosition) {
+  // Cas d'usage du switch !
+  let natureErreur;
+  switch (erreurPosition.code) {
+    case erreurPosition.TIMEOUT:
+      // Attention, durée par défaut de récupération des coordonnées infini
+      natureErreur = "La géolocalisation prends trop de temps...";
+      break;
+    case erreurPosition.PERMISSION_DENIED:
+      natureErreur = "Vous n'avez pas autorisé la géolocalisation.";
+      break;
+    case erreurPosition.POSITION_UNAVAILABLE:
+      natureErreur = "Votre position n'a pu être déterminée.";
+      break;
+    default:
+      natureErreur = "Une erreur inattendue s'est produite.";
+  }
+  // Injection du texte
+  $(".localisation").text(natureErreur);
+};
+
+// Récupération des coordonnées au clic sur le bouton
+$(".btnLoc").click(function() {
+  // Support de la géolocalisation
+  if ("geolocation" in navigator) {
+    // Support = exécution du callback selon le résultat
+    navigator.geolocation.getCurrentPosition(positionSucces, positionErreur, {
+      enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 30000,
+    });
+  } else {
+    // Non support = injection de texte
+    $(".localisation").text("La géolocalisation n'est pas supportée par votre navigateur");
+  }
+});
+
+
+
+// CARROUSEL
 
 // Gestion des événements
 $('.control>span').click(function() {
@@ -57,6 +127,7 @@ $('.apres').click(function() {
 });
 
 
+
 // CARROUSEL IMG FILM
 
 let index2 = 0;
@@ -97,62 +168,14 @@ $('.apres2').click(function() {
 });
 
 
-// CARTE (SLIDE 5)
+// let infosLoc = $(".localisation");
+// let btnLoc = $(".btnLoc");
 
-// Appelée si récupération des coordonnées réussie
-function positionSucces(position) {
-  // Injection du résultat dans du texte
-  const lat = Math.round(1000 * position.coords.latitude) / 1000;
-  const long = Math.round(1000 * position.coords.longitude) / 1000;
-  $(".localisation").text(`Latitude: ${lat}°, Longitude: ${long}°`);
-};
-
-// Appelée si échec de récuparation des coordonnées
-function positionErreur(erreurPosition) {
-  // Cas d'usage du switch !
-  let natureErreur;
-  switch (erreurPosition.code) {
-    case erreurPosition.TIMEOUT:
-      // Attention, durée par défaut de récupération des coordonnées infini
-      natureErreur = "La géolocalisation prends trop de temps...";
-      break;
-    case erreurPosition.PERMISSION_DENIED:
-      natureErreur = "Vous n'avez pas autorisé la géolocalisation.";
-      break;
-    case erreurPosition.POSITION_UNAVAILABLE:
-      natureErreur = "Votre position n'a pu être déterminée.";
-      break;
-    default:
-      natureErreur = "Une erreur inattendue s'est produite.";
-  }
-  // Injection du texte
-  $(".localisation").text(natureErreur);
-};
-
-// Récupération des coordonnées au clic sur le bouton
-$(".btnLoc").click(function() {
-  // Support de la géolocalisation
-  if ("geolocation" in navigator) {
-    // Support = exécution du callback selon le résultat
-    navigator.geolocation.getCurrentPosition(positionSucces, positionErreur, {
-      enableHighAccuracy: true,
-      timeout: 5000,
-      maximumAge: 30000,
-    });
-  } else {
-    // Non support = injection de texte
-    $(".localisation").text("La géolocalisation n'est pas supportée par votre navigateur");
-  }
-});
-
-let infosLoc = $(".localisation");
-let btnLoc = $(".btnLoc");
-
-if (infosLoc != empty) {
-  btnLoc.style.display='none';
-} else {
-  btnLoc.style.color='red';
-}
+// if (infosLoc != empty) {
+//   btnLoc.style.display='none';
+// } else {
+//   btnLoc.style.color='red';
+// }
 
 
 // POP UP

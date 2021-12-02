@@ -5,7 +5,7 @@
 let index = 0;
 let index1 = 0;
 
-// CARTE (SLIDE 5)
+// CARTOGRAPHIE (SLIDE 5)
 
 // Création de la carte, vide à ce stade
 const carte = L.map('carte', {

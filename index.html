@@ -17,16 +17,31 @@
    crossorigin=""></script>
     <title>Dune (int web)</title>
 </head>
+
 <body>
     <header>
         <section class="header_g">
-            <img src="medias/poster/tt_couleur.png" alt="">
+            <img src="medias/poster/tt_couleur.png" class="logo_Dune" alt="Logo Dune Film">
+            <img src="medias/favicon/menu-burger.png" class="btnMenu" alt="Icone menu">
             <nav class="menu">
-              <div class="div_menu menu_1"></div>
-              <div class="div_menu menu_2"></div>
-              <div class="div_menu menu_3"></div>
-              <div class="div_menu menu_4"></div>
-              <div class="div_menu menu_5"></div>
+              <div class="div_menu menu_1">
+                <a href="#slide1" id="nav1" class="aNav nav1">Trailer</a>
+              </div>
+              <div class="div_menu menu_2">
+                <a href="#slide2" id="nav2" class="aNav nav2">About the film</a>
+              </div>
+              <div class="div_menu menu_3">
+                <a href="#slide3" id="nav3" class="aNav nav3">Characters</a>
+              </div>
+              <div class="div_menu menu_4">
+                <a href="#slide4" id="nav4" class="aNav nav4">Images</a>
+              </div>
+              <div class="div_menu menu_5">
+                <a href="#slide5" id="nav5" class="aNav nav5">Find a movie theater</a>
+              </div>
+              <div class="div_menu menu_croix">
+                <img src="medias/favicon/close.png" id="nav_croix" alt="">
+              </div>
             </nav>
         </section>
         <section class="header_d">
@@ -72,7 +87,8 @@
         </div>
         </div>
         </div></div>
-        <section class="bg slide1">
+
+        <section class="bg slide1" id="slide1">
           <div id="container_video">
               <h2>Only in cinemas</h2>
               <div id="video">
@@ -80,7 +96,7 @@
         </div>
         </section>
         
-        <section class="bg slide2">
+        <section class="bg slide2" id="slide2">
           <h2>About the film</h2>
           <img src="medias/images/denis_villeneuve.webp" alt="">
           <div>Oscar nominee Denis Villeneuve (“Arrival,” “Blade Runner 2049”) directs Warner Bros. Pictures and Legendary Pictures’ “Dune,” the big-screen adaptation of Frank Herbert’s seminal bestselling book.
@@ -92,7 +108,7 @@
             Warner Bros. Pictures and Legendary Pictures Present “Dune”.</div>
         </section>
 
-        <section class="bg slide3">
+        <section class="bg slide3" id="slide3">
           <h2>Characters</h2>
           <div class="carrousel_persos">
             <img class="car_img car1" src="medias/characters/paul_atreides.jpg" alt="">
@@ -158,7 +174,7 @@ c4.164,4.165,4.164,10.917,0,15.083L135.685,487.544C133.685,489.551,130.967,490.6
           </div>
         </section>
 
-        <section class="bg slide4">
+        <section class="bg slide4" id="slide4">
           <h2>Images of the film</h2>
           <div class="carrousel_img">
             <img class="img_film img_film1" src="medias/images/02.jpg" alt="">
@@ -194,7 +210,7 @@ c4.164,4.165,4.164,10.917,0,15.083L135.685,487.544C133.685,489.551,130.967,490.6
           </div>
         </section>
 
-        <section class="bg slide5">
+        <section class="bg slide5" id="slide5">
           <h2>Find a movie theater</h2>
           <div class="carto">
             <p class="localisation"></p>

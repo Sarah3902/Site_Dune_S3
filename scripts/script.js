@@ -1,4 +1,29 @@
 
+// MENU
+
+let btnMenu = document.querySelector('.btnMenu');
+let menu = document.querySelector('.menu');
+let menuCroix = document.querySelector('#nav_croix');
+let aMenu = document.querySelectorAll('.aNav');
+
+btnMenu.addEventListener('click', (e) => {
+  menu.style.top = '2%';
+  btnMenu.style.display = 'none';
+});
+
+menuCroix.addEventListener('click', (e) => {
+  menu.style.top = '-20%';
+  btnMenu.style.display = 'block';
+});
+
+
+for (aNav of aMenu) {
+  aNav.addEventListener('click', (e) => {
+    menu.style.top = '-20%';
+    btnMenu.style.display = 'block';
+  });
+}
+
 // CARROUSEL PERSONNAGES
 
 // Variable globale
@@ -26,7 +51,7 @@ L.control.scale().addTo(carte);
 
 // Appelée si récupération des coordonnées réussie
 
-  // Injection du résultat dans du texte
+// Injection du résultat dans du texte
 function positionSucces(position) {
   const lat = Math.round(1000 * position.coords.latitude) / 1000;
    const long = Math.round(1000 * position.coords.longitude) / 1000;

@@ -147,6 +147,7 @@ main {
     color: wheat;
 }
 
+
   /* Slide 2 */
 
   .slide2>h2 {
@@ -335,6 +336,7 @@ main {
     position: absolute;
     top: 16%;
     right: 0;
+    z-index: 500;
   }
   
   .scroll {
@@ -353,7 +355,7 @@ main {
     position: fixed;
     top: 30px;
     right: 120px;
-    z-index: 5;
+    z-index: 600;
   }
 
   #titre_popup {

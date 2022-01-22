@@ -15,7 +15,7 @@
     <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
    integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
    crossorigin=""></script>
-    <title>Dune (int web)</title>
+    <title>Dune Film - DUT MMI</title>
 </head>
 
 <body>
@@ -88,15 +88,15 @@
         </div>
         </div></div>
 
-        <section class="bg slide1" id="slide1">
-          <div id="container_video">
+        <section class="bg slide1 testPara parallaxe sec1" id="slide1">
+          <div id="container_video" class=" testPara static">
               <h2>Only in cinemas</h2>
               <div id="video">
           </div>
         </div>
         </section>
         
-        <section class="bg slide2" id="slide2">
+        <section class="bg slide2 testPara parallaxe sec2" id="slide2">
           <h2>About the film</h2>
           <img src="medias/images/denis_villeneuve.webp" alt="">
           <div>Oscar nominee Denis Villeneuve (“Arrival,” “Blade Runner 2049”) directs Warner Bros. Pictures and Legendary Pictures’ “Dune,” the big-screen adaptation of Frank Herbert’s seminal bestselling book.
@@ -274,10 +274,12 @@ c4.164,4.165,4.164,10.917,0,15.083L135.685,487.544C133.685,489.551,130.967,490.6
         // Valeur declenchant la modification de l'affichage (choix "esthétique")
         const seuil = posYVideo + 0.75 * hauteurVideo;
   
+        console.log(seuil);
+
         // Gestion du défilement
-        $(window).scroll(function () {
+        $('main').scroll(function () {
           // Récupération de la valeur du défilement vertical
-          const scroll = $(window).scrollTop();
+          const scroll = $('main').scrollTop();
   
           // Classe permettant l'exécution du CSS
           $("#video").toggleClass(
